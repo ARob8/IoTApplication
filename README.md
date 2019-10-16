@@ -2,7 +2,6 @@
 <html>
     <head>
       <meta charset="utf=8">
-        <title>Iot Application</title>
     </head>
     <body>
     <h1>IoT Application:</h1>
