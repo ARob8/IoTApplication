@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<!-- Plotly.js -->
+	<script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</h:head>
+<body>
+
+	<canvas id="myLineChart" width="740" height="200"></canvas>
+	
+	<script>
+  // Get the context of the canvas element we want to select
+  function drawLineChart() {
+
+    var jsonData = $.ajax({
+      url: "/Weather2/rest/weather/getjson1",
+      dataType: "json",
+    }).done(function (results) {
+
+      // Split timestamp and data into separate arrays
+      var labels = [], data=[], humidity=[], pressure=[];
+      for(let result of results.data){
+        labels.push(result.datetime);
+        data.push(result.temperature);
+        humidity.push(result.humidity);
+        pressure.push(result.pressure);
+      }
+
+      // Create the chart.js data structure using 'labels' and 'data'
+      var tempData = {
+        labels : labels,
+        datasets : [{
+       label: data,
+            fillColor             : ["rgba(151,187,205,0.2)","red"],
+            strokeColor           : ["rgba(151,187,205,1)","red"],
+            pointColor            : ["rgba(151,187,205,1)","red"],
+            pointStrokeColor      : "#ff6384",
+            pointHighlightFill    : "#ff6384",
+            pointHighlightStroke  : ["rgba(151,187,205,1)","red"],
+            data                  : data
+        },
+        {
+            label: humidity,
+  	            fillColor             : "rgba(151,187,205,0.2)",
+  	            strokeColor           : "rgba(200,187,205,1)",
+  	            pointColor            : "rgba(151,187,205,1)",
+  	            pointStrokeColor      : "#fff",
+  	            pointHighlightFill    : "#fff",
+  	            pointHighlightStroke  : "rgba(151,187,205,1)",
+  	            data                  : humidity
+  	      },
+  	      {
+  	    	label: pressure,
+      	            fillColor             : "rgba(151,187,205,0.2)",
+      	            strokeColor           : "rgba(151,187,205,1)",
+      	            pointColor            : "rgba(151,187,205,1)",
+      	            pointStrokeColor      : "#fff",
+      	            pointHighlightFill    : "#fff",
+      	            pointHighlightStroke  : "rgba(151,187,205,1)",
+      	            data                 : pressure
+      	   }
+        ]
+      };
+
+      // Get the context of the canvas element we want to select
+      var ctx = document.getElementById("myLineChart").getContext("2d");
+
+      var myNewChart = new Chart(ctx , {
+    	    type: "line",
+    	    data: tempData,
+    	    
+    	});
+      
+    });
+  }
+
+  drawLineChart();
+</script>
+
+<a href="LoginPass.xhtml">
+   <button>GO BACK</button>
+</a>
+	
+
+</body>
+</html>

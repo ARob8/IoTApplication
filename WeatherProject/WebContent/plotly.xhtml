@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<script type="text/javascript"
+		src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+</h:head>
+<body>
+	<div id="myDiv">
+		<!-- Plotly chart will be drawn inside this DIV -->
+	</div>
+	<script>
+    
+	  var trace1 = {
+			    x: [],
+			    y: [],
+			    mode: 'lines',
+			    name: 'Temperature'
+			};
+		var trace2 = {
+			    x: [],
+			    y: [],
+			    mode: 'lines',
+			    name: 'Humidity'
+			};
+		var trace3 = {
+			    x: [],
+			    y: [],
+			    mode: 'lines+markers',
+			    name: 'Pressure'
+			};
+		    
+
+var jsonData = $.ajax({
+    url: "/Weather2/rest/weather/getjson1",
+    dataType: "json",
+  }).done(function (results) {
+
+    // Split timestamp and data into separate arrays
+
+   
+    for(let result of results.data){
+      trace1.x.push(result.datetime);
+      trace1.y.push(result.temperature);
+      trace2.x.push(result.datetime);
+      trace2.y.push(result.humidity);
+      trace3.x.push(result.datetime);
+      trace3.y.push(result.pressure);
+    }
+
+    var data = [ trace1, trace2, trace3 ];
+
+    var layout = {};
+
+    Plotly.newPlot('myDiv', data, layout);
+  });
+
+
+
+</script>
+<a href="LoginPass.xhtml">
+   <button>GO BACK</button>
+</a>
+</body>
+</html>

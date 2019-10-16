@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<body>
+	<h1>WEATHER INFORMATION</h1>
+
+	<div align="center">
+		<ui:composition template="/layouts/commonLayout.xhtml">
+			<ui:define name="title"> SHOW WEATHER PAGE</ui:define>
+			<ui:define name="content">
+				<h:dataTable value="#{weatherController.weatherBusiness.weather}"
+					var="t" styleClass="tracks-table" headerClass="tracks-table-header"
+					rowClasses="tracks-table-odd-row, tracks-table-even-row">
+					<h:column>
+						<f:facet name="header"> Date time</f:facet> 
+						<div align="center">#{t.datetime}</div>
+			</h:column>
+					<h:column>
+						<f:facet name="header">Temperature </f:facet>
+						<div align="center">#{t.temperature}</div>
+					</h:column>
+					<h:column>
+						<f:facet name="header">Humidity </f:facet>
+						<div align="center">#{t.humidity}</div>
+					</h:column>
+					<h:column>
+						<f:facet name="header">Pressure </f:facet>
+						<div align="center">#{t.pressure}</div>
+					</h:column>
+				</h:dataTable>
+				<br />
+				<h:form>
+					<h:button value="Go Back" styleClass = "btn btn-default"  outcome="LoginPass.xhtml">
+					</h:button>
+				</h:form>
+	</ui:define>
+	</ui:composition>
+	</div>
+</body>
+</html>
