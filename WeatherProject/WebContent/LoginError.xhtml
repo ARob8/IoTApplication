@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="col-sm-10"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+\
+	<!-- Set the Layout  and Title for this page -->
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<ui:define name="title"> LOGIN PAGE</ui:define>
+		<ui:define name="content">
+			<!-- Login Form -->
+			<div align="center">
+				<h:form styleClass="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-10">
+							User Name: <br />
+							<h:inputText id="userName" value="#{user.userName}"
+								styleClass="control-control" title="" />
+						</div>
+					</div>
+					<h:message for="firstName" />
+					<br />
+					<div class="form-group">
+						<div class="col-sm-10">
+							Password: <br />
+							<h:inputText id="password" value="#{user.password}"
+								styleClass="control-control" title="" />
+						</div>
+					</div>
+					<h4>WRONG USERNAME OR PASSWORD </h4>
+					<h:commandButton value="Sign in" action="#{loginController.checkLogin}" styleClass = "btn btn-default" />
+				</h:form>
+				<h:messages />
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
