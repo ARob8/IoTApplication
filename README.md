@@ -5,7 +5,11 @@
     </head>
     <body>
     <h1>Weather Reporting IoT Web Application</h1>
-        <p>Designed and developed an IoT weather reporting application that collects weather data from a Raspberry Pi and displays the data using front-end Java technologies. Built RESTful web services using JAX-RS to consume weather data generated from a Raspberry Pi. Implemented using JBoss EAP, Apache Tomcat server, XHTML, JavaScript, CSS, JSON, Java, and Python. Designed the application to leverage eight common design patterns in Java. Utilized daily stand ups and user stories.
-</p>
+     <ul>
+        <li><h3>Front-end web application using enterprise Java technologies to implement a IoT weather reporting application.<h3></li>
+        <li><h3>Leveraged eight common design patterns in Java.</h3></li>
+        <li><h3>JBoss EAP, Red Hat Developer Studio, Apache Tomcat server, MySQL, XHTML, CSS, jQuery, JavaScript, and Bootstrap.</h3></li>
+        <li><h3>Built RESTful web services using JAX-RS to consume weather data generated from a Raspberry Pi.</h3></li>
+    </ul>
   </body>
 </html>
