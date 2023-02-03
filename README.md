@@ -4,7 +4,7 @@
       <meta charset="utf=8">
     </head>
     <body>
-    <h1>Weather Reporting IoT Web Application</h1>
+    <h1>Weather Reporting IoT Application</h1>
      <ul>
         <li><h3>Front-end web application using enterprise Java technologies to implement a IoT weather reporting application.<h3></li>
         <li><h3>Leveraged eight common design patterns in Java.</h3></li>
