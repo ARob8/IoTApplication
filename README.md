@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf=8">
-    </head>
-    <body>
-    <h1>Weather Reporting IoT Web Application</h1>
-     <ul>
-        <li><h3>IoT weather reporting application built using enterprise Java technologies.<h3></li>
-        <li><h3>Leveraged eight common design patterns in Java.</h3></li>
-        <li><h3>JBoss EAP, Red Hat Developer Studio, Apache Tomcat server, MySQL, XHTML, CSS, jQuery, JavaScript, and Bootstrap.</h3></li>
-        <li><h3>Built RESTful web services using JAX-RS to consume weather data generated from a Raspberry Pi.</h3></li>
-    </ul>
-  </body>
-</html>
+# Weather Reporting IoT Web Application
+
+## Description
+
+IoT weather reporting application, developed using Java technologies, retrieves and showcases weather data sourced from a Raspberry Pi via RESTful web services implemented with JAX-RS. The architecture of the application leverages eight well-established design patterns in Java.
+
+## Technologies
+
+- JBoss EAP: Enterprise Application Platform used for deploying Java applications.
+- Red Hat Developer Studio: Integrated development environment (IDE) for Java development.
+- Apache Tomcat: Web server and servlet container used for hosting Java web applications.
+- MySQL: Relational database management system (RDBMS) used for storing application data.
+- XHTML: Markup language for structuring web pages.
+- CSS: Cascading Style Sheets for styling the user interface.
+- jQuery: JavaScript library used for DOM manipulation and event handling.
+- JavaScript: Programming language used for client-side scripting.
+- Bootstrap: Front-end framework for developing responsive and mobile-first websites.
+- JAX-RS: Java API for RESTful web services used for building REST endpoints.
+- Raspberry Pi: Small single-board computer used for generating weather data.
