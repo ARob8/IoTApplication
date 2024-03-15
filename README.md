@@ -2,7 +2,7 @@
 
 ## Description
 
-IoT weather reporting application, developed using Java technologies, retrieves and showcases weather data sourced from a Raspberry Pi via RESTful web services implemented with JAX-RS. The architecture of the application leverages eight well-established design patterns in Java.
+IoT weather reporting application, developed using Enterprise Java technologies, retrieves and showcases weather data sourced from a Raspberry Pi via RESTful web services implemented with JAX-RS. The architecture of the application leverages eight well-established design patterns in Java.
 
 ## Technologies
 
