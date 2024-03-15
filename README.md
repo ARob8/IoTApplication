@@ -2,7 +2,7 @@
 
 ## Description
 
-This system retrieves and showcases weather data sourced from a Raspberry Pi through RESTful web services. It serves as a platform for users to access real-time weather information conveniently. The architecture of the application leverages eight well-established design patterns in Java.
+This system retrieves real-time weather data from a Raspberry Pi via RESTful web services and showcases it to users, serving as a platform for convenient access to weather information. The application leverages eight well-established design patterns in Java to ensure robustness, scalability, and maintainability.
 
 ## Technologies
 
