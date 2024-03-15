@@ -1,4 +1,4 @@
-# Weather Reporting IoT Web Application
+# IoT Weather Reporting Application
 
 ## Description
 
