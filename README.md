@@ -17,4 +17,5 @@ This system retrieves real-time weather data from a Raspberry Pi via RESTful web
 - JavaScript: Programming language used for client-side scripting.
 - Bootstrap: Front-end framework for developing responsive and mobile-first websites.
 - Raspberry Pi: Small single-board computer used for generating weather data.
-- Python: High-level, interpreted programming language known for its simplicity and readability
+- Python: High-level, interpreted programming language known for its simplicity and readability.
+- Java: Versatile programming language known for its platform independence and extensive ecosystem of libraries and frameworks.
