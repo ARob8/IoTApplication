@@ -1,11 +1,9 @@
 # IoT Weather Reporting System
 
 ## Description
-
 This system retrieves real-time weather data from a Raspberry Pi via RESTful web services and showcases it to users, serving as a platform for convenient access to weather information. The application leverages eight well-established design patterns in Java to ensure robustness, scalability, and maintainability.
 
 ## Technologies
-
 - Java: Implemented core application logic, including data retrieval, processing, and presentation. Leveraged Java's object-oriented features for modular design and scalability.
 - MySQL: Utilized as the primary database management system for storing weather data retrieved from the Raspberry Pi. Designed database schema, implemented CRUD operations, and ensured data integrity.
 - JBoss EAP: Deployed the Java application on the JBoss Enterprise Application Platform for robustness and scalability. Leveraged JBoss features for managing resources, deploying applications, and ensuring high availability.
